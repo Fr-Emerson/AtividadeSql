@@ -2,14 +2,7 @@ import sqlite3 as sq
 
 connect = sq.connect("Steam.db")
 cursor = connect.cursor()
-# para se basear
-# CREATE VIEW vw_disciplinas_professor AS
-# SELECT 
-#     p.nome AS nome_professor,
-#     p.departamento,
-#     d.nome_disciplina
-# FROM Professores p
-# INNER JOIN Disciplinas d ON p.id_professor = d.id_professor;
+
 
 cursor.execute(
         """
