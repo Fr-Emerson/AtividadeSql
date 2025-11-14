@@ -42,3 +42,15 @@ cursor.execute(
     ORDER BY total_gasto DESC;
     """
 )
+cursor.execute(
+    """
+    CREATE VIEW IF NOT EXISTS vw_amigos_usuario AS
+    SELECT
+        u1.nome AS usuario,
+        u2.nome AS amigo,
+        a.data AS data_amizade
+    FROM amigos a
+    JOIN usuario u1 ON a.id_usuario1 = u1.id_usuario
+    JOIN usuario u2 ON a.id_usuario2 = u2.id_usuario;
+    """
+)

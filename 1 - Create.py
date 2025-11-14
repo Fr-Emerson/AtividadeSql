@@ -46,6 +46,17 @@ cursor.execute(
         data_adicionado TEXT,
         FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario),
         FOREIGN KEY (id_jogo) REFERENCES jogo(id_jogo)
+    );
+    """
+)
+cursor.execute(
+    """
+    CREATE TABLE IF NOT EXISTS amigos (
+        id_usuario1 INTEGER NOT NULL,
+        id_usuario2 INTEGER NOT NULL,
+        data TEXT,
+    FOREIGN KEY (id_usuario1) REFERENCES usuario(id_usuario),
+    FOREIGN KEY (id_usuario2) REFERENCES usuario(id_usuario)
 );
 
     """
