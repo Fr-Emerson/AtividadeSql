@@ -1,3 +1,4 @@
+#Feito por Francisco Emerson e Kaua Muniz
 import streamlit as st
 import sqlite3
 import pandas as pd
@@ -111,7 +112,7 @@ elif menu == "Cadastrar Jogo":
     ano = st.number_input("Ano de lançamento:", min_value=1970, max_value=2025, step=1)
     classificacao = st.number_input("Classificação indicativa:", min_value=0, max_value=18, step=1)
     criador = st.text_input("Criador:")
-    nota = st.slider("Nota do jogo:", 0, 10, 5)
+    nota = st.slider("Nota do jogo:", 0, 100, 50)
 
     if st.button("Cadastrar Jogo"):
         if nome and criador:

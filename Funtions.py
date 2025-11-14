@@ -1,3 +1,4 @@
+#Feito por Francisco Emerson e Kaua Muniz
 import streamlit as st
 import sqlite3
 import pandas as pd

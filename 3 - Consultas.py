@@ -1,3 +1,4 @@
+#Feito por Francisco Emerson e Kaua Muniz
 import sqlite3 as sq
 
 connect = sq.connect("Steam.db")

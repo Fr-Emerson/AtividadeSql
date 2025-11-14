@@ -1,3 +1,4 @@
+#Feito por Francisco Emerson e Kaua Muniz
 import sqlite3 as sq
 
 connect = sq.connect("Steam.db")
@@ -17,7 +18,7 @@ cursor.execute(
     """
 )
 
-# ⚠️ Adicione o campo "nota" na tabela jogo antes, ou remova daqui.
+
 cursor.execute(
     """
         INSERT INTO jogo(nome, preco, ano_lancamento, classificacao, criador, nota)

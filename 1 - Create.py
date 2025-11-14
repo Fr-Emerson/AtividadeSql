@@ -1,3 +1,4 @@
+#Feito por Francisco Emerson e Kaua Muniz
 import sqlite3 as sq
 
 connect = sq.connect("Steam.db")
@@ -37,6 +38,17 @@ cursor.execute(
     )
     """
 )
+cursor.execute(
+    """
+    CREATE TABLE IF NOT EXISTS wishlist (
+        id_usuario INTEGER NOT NULL,
+        id_jogo INTEGER NOT NULL,
+        data_adicionado TEXT,
+        FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario),
+        FOREIGN KEY (id_jogo) REFERENCES jogo(id_jogo)
+);
 
+    """
+)
 connect.close()
 print("A tabela foi criada")
