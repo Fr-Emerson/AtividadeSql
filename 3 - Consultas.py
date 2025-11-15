@@ -54,3 +54,16 @@ cursor.execute(
     JOIN usuario u2 ON a.id_usuario2 = u2.id_usuario;
     """
 )
+cursor.execute(
+    """
+    CREATE VIEW IF NOT EXISTS vw_wishlist_usuario AS
+    SELECT
+        u.nome AS usuario,
+        j.nome AS jogo,
+        j.preco AS preco,
+        w.data_adicionado AS data_adicionado
+    FROM wishlist w
+    JOIN usuario u ON w.id_usuario = u.id_usuario
+    JOIN jogo j ON w.id_jogo = j.id_jogo;
+    """
+)
